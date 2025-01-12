@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navContainer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navMenu,
+.navAuth {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navMenu li a,
+.navAuth li a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.navAuth li {
+    color: #fff;
+}
+
