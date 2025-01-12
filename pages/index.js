@@ -3,106 +3,94 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 
-const initialPosts = [
+export const initialPosts = [
     {
         id: 1,
         title: 'Pierwszy wpis – wprowadzenie do hodowli oliwek w domu',
+        image: '/images/olive1.jpg',
         content: `Hodowanie oliwek w warunkach domowych może wydawać się egzotycznym pomysłem, 
-ale tak naprawdę jest to fascynujące hobby, które daje ogromną satysfakcję. 
-Oliwki są jednym z najstarszych uprawianych drzew owocowych, cenionych za swoje 
-zdrowotne właściwości i szerokie zastosowanie w kuchni. W tym wpisie chcę podzielić 
-się moją osobistą historią, jak odkryłem świat hodowli oliwek. 
-Pierwszy kontakt miałem podczas podróży do Hiszpanii, gdzie zobaczyłem rozległe 
-gaje oliwne. Zafascynowany ich majestatem, postanowiłem spróbować sił z własną 
-roslinką w domu. 
+ale tak naprawdę jest to fascynujące hobby, które daje ogromną satysfakcję. Oliwki są jednym 
+z najstarszych uprawianych drzew owocowych, cenionych za swoje zdrowotne właściwości i szerokie 
+zastosowanie w kuchni. 
 
-Możecie zapytać: czy to w ogóle możliwe w naszym klimacie? Okazuje się, że tak! 
-Istnieją odmiany, które dobrze znoszą warunki panujące w mieszkaniu, o ile zapewnimy 
-im odpowiednią ilość światła i umiarkowaną wilgotność. W kolejnych artykułach zdradzę, 
-jakie odmiany polecam dla początkujących oraz jak przygotować przestrzeń dla 
-drzewka oliwnego. Zapraszam do lektury!`
+W tym wpisie chcę podzielić się moją osobistą historią, jak odkryłem świat hodowli oliwek. 
+Pierwszy kontakt miałem podczas podróży do Hiszpanii, gdzie zobaczyłem rozległe gaje oliwne. 
+Zafascynowany ich majestatem, postanowiłem spróbować sił z własną rośliną w domu. 
+
+Możecie zapytać: czy to w ogóle możliwe w naszym klimacie? Okazuje się, że tak! Istnieją odmiany, 
+które dobrze znoszą warunki panujące w mieszkaniu, o ile zapewnimy im odpowiednią ilość światła 
+i umiarkowaną wilgotność. W kolejnych artykułach zdradzę, jakie odmiany polecam dla początkujących 
+oraz jak przygotować przestrzeń dla drzewka oliwnego. Zapraszam do lektury!`
     },
     {
         id: 2,
         title: 'Drugi wpis – porady i wskazówki dla początkujących pasjonatów oliwek',
-        content: `Jeśli zastanawiasz się, jak zacząć z hodowlą oliwek, w tym wpisie poznasz 
-kilka praktycznych porad. Przede wszystkim, wybierz odpowiednią odmianę przystosowaną 
-do warunków doniczkowych. Popularne są np. odmiany typu Olea europaea 'Arbequina' czy 
-'Olea europaea 'Mission', które z powodzeniem można uprawiać na parapetach lub 
-w ogrodach zimowych. 
+        image: '/images/olive2.jpg',
+        content: `Jeśli zastanawiasz się, jak zacząć z hodowlą oliwek, w tym wpisie poznasz kilka 
+praktycznych porad. Przede wszystkim wybierz odmianę dostosowaną do warunków doniczkowych. 
+Popularne są np. Olea europaea ‘Arbequina’ czy ‘Mission’. 
 
-Kolejną kwestią jest ziemia – drzewka oliwne lubią podłoże przepuszczalne, o lekko 
-zasadowym odczynie. Często stosuje się mieszankę ziemi uniwersalnej, piasku i ewentualnie 
-odrobiny żwiru, by zapobiec zaleganiu wody przy korzeniach. Pamiętaj też o donicy z 
-odpowiednim drenażem. Oliwki wolą lekkie przesuszenie niż przelanie. 
+Kolejną kwestią jest ziemia – drzewka oliwne lubią podłoże przepuszczalne, o lekko zasadowym 
+odczynie. Dobrze sprawdza się mieszanka ziemi uniwersalnej z domieszką piasku lub perlitu, 
+aby uniknąć zalegania wody przy korzeniach. 
 
-Nie zapominaj o słońcu – oliwki kochają światło, więc warto znaleźć im jasne miejsce 
-blisko okna, najlepiej o ekspozycji południowej lub południowo-zachodniej. Przy 
-zbyt małej ilości światła liście mogą żółknąć, a wzrost będzie znacznie wolniejszy. 
-Ostatnia rada na start: bądź cierpliwy – oliwki rosną dość wolno, więc regularna, ale 
-nienachalna opieka to klucz do sukcesu.`
+Nie zapominaj o słońcu – oliwki kochają światło, najlepiej słoneczne parapety o ekspozycji 
+południowej lub południowo-zachodniej. Zbyt mała ilość światła może spowodować żółknięcie liści 
+i wolniejszy wzrost. Bądź też cierpliwy – oliwki rosną dość wolno, ale satysfakcja z ich 
+pielęgnacji jest ogromna!`
     },
     {
         id: 3,
-        title: 'Trzeci wpis – sekrety rozwoju drzewek oliwnych w warunkach domowych',
-        content: `Oliwki potrzebują odpowiedniego połączenia światła, wilgotności i temperatury, 
-by móc się prawidłowo rozwijać. Większość odmian woli zakres temperatur między 15°C a 25°C, 
-co w domu jest stosunkowo łatwe do utrzymania. Unikaj jednak stawiania donicy przy gorących 
-kaloryferach lub w przeciągach (np. przy często otwieranym oknie zimą). 
+        title: 'Trzeci wpis – sekrety rozwoju drzewek oliwnych i pielęgnacja',
+        image: '/images/olive3.jpg',
+        content: `Oliwki potrzebują optymalnego połączenia światła, wilgotności i temperatury, by 
+mogły się prawidłowo rozwijać. Najczęściej preferują temperatury w zakresie 15–25°C. Unikaj 
+stawiania donicy przy grzejnikach lub w zimnych przeciągach. 
 
-Kiedy zauważyłem pierwsze przyrosty na swoim drzewku oliwnym, byłem zachwycony – drobne, 
-jasnozielone gałązki zaczynały się rozwijać coraz szybciej. Kluczem okazało się stosowanie 
-regularnego nawożenia nawozem bogatym w potas i fosfor, które wspierają kwitnienie i 
-owocowanie. Nie oczekuj jednak owoców w ciągu kilku miesięcy – czasem trzeba poczekać nawet 
-kilka lat. 
+Kiedy zauważysz pierwsze młode przyrosty na gałązkach, to znak, że roślina zaaklimatyzowała się 
+w nowym miejscu. Warto wtedy rozpocząć lekkie nawożenie nawozem do roślin śródziemnomorskich 
+lub uniwersalnym nawozem płynnym, stosowanym co kilka tygodni. 
 
-Jeśli chodzi o podlewanie – zachowaj umiar. Sprawdzaj wilgotność podłoża: jeśli jego wierzchnia 
-warstwa jest sucha na głębokość około 2–3 cm, wtedy dopiero podlej. Nadmierne podlewanie może 
-prowadzić do gnicia korzeni, co niestety szybko może wykończyć roślinę. Pamiętaj również, 
-aby obficie lać wodę, ale dać jej spłynąć i usunąć nadmiar z podstawka. Takie drobne nawyki 
-pomagają drzewkom oliwnym zdrowo rosnąć w naszych domach.`
+Uważaj na przelanie – oliwki lepiej zniosą zbyt małą ilość wody niż nadmiar. Zawsze sprawdzaj 
+wilgotność podłoża przed podlaniem. Jeżeli zauważysz żółknięcie liści, może to być sygnał 
+przelania albo niedoświetlenia.`
     },
     {
         id: 4,
-        title: 'Czwarty wpis – jak radzić sobie z ewentualnymi chorobami i szkodnikami',
-        content: `Nawet najlepiej zadbane drzewko oliwne może paść ofiarą chorób i szkodników. 
-Najczęściej spotykane problemy w domowej uprawie to przędziorki, tarczniki i mszyce. 
-Jeżeli zauważysz na liściach drobne pajęczynki lub białe kropki, prawdopodobnie masz do 
-czynienia z przędziorkiem. W walce z nimi pomóc mogą naturalne preparaty na bazie olejków 
-(roślinnych, np. olej neem) albo środki chemiczne dedykowane roślinom ozdobnym. 
+        title: 'Czwarty wpis – choroby, szkodniki i sposoby ochrony oliwek',
+        image: '/images/olive4.jpg',
+        content: `Niestety, nawet najlepiej zadbane drzewko oliwne może paść ofiarą chorób i szkodników. 
+Często spotykane są przędziorki, mszyce czy tarczniki. Regularnie oglądaj liście i łodygi, 
+aby szybko wykryć ewentualne oznaki żerowania. 
 
-Czasem zdarza się również, że liście oliwek żółkną i opadają. Może to być spowodowane 
-zarówno nadmiernym, jak i niedostatecznym podlewaniem. Dlatego tak ważne jest pilnowanie 
-regularności i umiaru. Pamiętaj też, by nie stosować zbyt dużej dawki nawozu na raz – 
-przenawożenie potrafi uszkodzić korzenie. 
+Jeżeli zobaczysz drobne pajęczynki lub białe naloty, zastosuj preparaty na bazie oleju neem 
+bądź specjalistyczne środki ochrony roślin. Staraj się unikać ciężkich chemicznych oprysków, 
+zwłaszcza w pomieszczeniach mieszkalnych. 
 
-Podczas mojej hodowli spotkałem się też z sytuacją, gdy oliwka miała plamy na liściach. 
-Okazało się, że powodem było zbyt częste zraszanie w połączeniu ze słabą wentylacją. 
-Niektóre odmiany mogą źle reagować na nadmiar wilgoci na liściach. Warto wietrzyć pomieszczenie, 
-ale tak, by uniknąć przeciągów. Dobry przepływ powietrza ogranicza rozwój grzybów i bakterii.`
+Drugim częstym problemem może być grzyb powodujący plamistość liści – na powierzchni liścia 
+widać ciemniejsze lub żółte plamy. Pomocne bywa ograniczenie zraszania liści i poprawa cyrkulacji 
+powietrza w pomieszczeniu.`
     },
     {
         id: 5,
-        title: 'Piąty wpis – zbiór i wykorzystanie własnych oliwek',
-        content: `Jeśli wszystko pójdzie dobrze, po kilku latach możesz doczekać się pierwszych owoców. 
-Proces kwitnienia zaczyna się zwykle wiosną, a oliwki dojrzewają stopniowo aż do późnej jesieni. 
-Pamiętaj jednak, że domowa hodowla oliwek jest nastawiona raczej na przyjemność i pasję niż na 
-masowe zbiory. Ilość owoców będzie skromna, ale sam fakt, że udało Ci się wyhodować „prawdziwe” 
-oliwki, jest wspaniałym uczuciem! 
+        title: 'Piąty wpis – zbiór i wykorzystanie własnych oliwek oraz wskazówki na przyszłość',
+        image: '/images/olive5.jpg',
+        content: `Po kilku latach cierpliwej uprawy może nadejść moment kulminacyjny: owocowanie. 
+Oliwki zazwyczaj kwitną wiosną, a owoce dojrzewają do późnej jesieni. W warunkach domowych nie 
+zawsze osiągniemy obfite plony, ale nawet kilka zebranych oliwek może dać mnóstwo radości. 
 
-Co zrobić z takimi owocami? Zazwyczaj wymagają one procesu marynowania lub peklowania, by pozbyć 
-się goryczki. Tradycyjne metody zakładają moczenie w solance i codzienną wymianę wody przez kilka 
-tygodni. Możesz też spróbować krótszej drogi, wykorzystując specjalne zalewy octowe lub oliwne. 
-Moje pierwsze własnoręcznie zebrane oliwki zamarynowałem w oliwie z dodatkiem czosnku i ziół 
-prowansalskich – efekt przeszedł moje oczekiwania! 
+Aby owoce nadawały się do spożycia, trzeba je najpierw poddać procesowi tzw. odgoryczania. 
+Tradycyjna metoda to moczenie w solance przez kilka tygodni, z regularną wymianą wody. 
+Dopiero wtedy oliwki są gotowe do marynowania w zalewie ziołowej lub octowej. 
 
-Mam nadzieję, że ta mała seria wpisów zainspiruje Cię do spróbowania hodowli oliwek w domu. 
-To piękna przygoda, choć wymaga cierpliwości i świadomej pielęgnacji. Nic nie zastąpi jednak 
-widoku kwitnącego drzewka oliwnego na Twoim parapecie, a satysfakcja ze zjedzenia własnych, 
-choćby nielicznych, owoców jest bezcenna. Życzę powodzenia i trzymam kciuki za Twoje oliwkowe 
-eksperymenty!`
+Gdy już spróbujesz własnoręcznie wyhodowanych oliwek, zrozumiesz, dlaczego tak wiele osób 
+pokochuje to hobby. Oprócz pysznych owoców zyskasz piękną, dekoracyjną roślinę w domu, która 
+przywołuje klimat ciepłego południa. Zachęcam do dzielenia się własnymi doświadczeniami i 
+przemyśleniami w komentarzach!`
     }
 ];
+
+
 
 
 export default function HomePage() {
