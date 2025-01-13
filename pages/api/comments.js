@@ -1,6 +1,6 @@
-// Prosta baza komentarzy w pamięci
+
 let commentsDB = {
-    // postId: [ { user: 'admin', text: 'fajny post!' }, ... ]
+
 };
 
 export default function handler(req, res) {

@@ -10,8 +10,7 @@ export default function CommentForm({ onCommentAdd, loggedInUser }) {
         setText('');
     };
 
-    // Jeśli nie ma zalogowanego użytkownika, można
-    // pokazać info, że trzeba się zalogować.
+
     if (!loggedInUser) {
         return (
             <p style={{ marginTop: '20px', color: 'red' }}>

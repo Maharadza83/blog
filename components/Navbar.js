@@ -6,7 +6,7 @@ export default function Navbar() {
     const [loggedInUser, setLoggedInUser] = useState(null);
 
     useEffect(() => {
-        // Sprawdzamy, czy w localStorage jest token i nazwa usera
+
         const token = localStorage.getItem('token');
         const userName = localStorage.getItem('userName');
         if (token && userName) {

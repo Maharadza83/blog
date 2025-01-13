@@ -17,7 +17,7 @@ export default function RegisterPage() {
 
         if (res.ok) {
             const data = await res.json();
-            // Zapisz "token" i userName w localStorage
+
             localStorage.setItem('token', data.token);
             localStorage.setItem('userName', data.userName);
 

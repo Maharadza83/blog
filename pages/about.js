@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import '../styles/AboutUs.module.css';
 import styles from '../styles/AboutUs.module.css';
 
+
 export default function AboutPage() {
     return (
         <Layout>

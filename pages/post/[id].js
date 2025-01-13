@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Layout from '../../components/Layout';
 import CommentForm from '../../components/CommentForm';
 
-// Nasze posty
+
 import { initialPosts } from '../../pages/index';
 
 export default function PostPage() {
@@ -26,7 +26,7 @@ export default function PostPage() {
             const found = initialPosts.find((p) => p.id === parseInt(id));
             setPost(found);
 
-            // Ładujemy komentarze z API (zakładam, że to Twój endpoint)
+
             fetch(`/api/comments?postId=${id}`)
                 .then((res) => res.json())
                 .then((data) => setComments(data.comments))
@@ -40,7 +40,7 @@ export default function PostPage() {
             return;
         }
 
-        // Wysyłamy komentarz do API
+
         const res = await fetch('/api/comments', {
             method: 'POST',
             headers: {
@@ -53,10 +53,10 @@ export default function PostPage() {
         setComments(data.comments);
     };
 
-    // Funkcja dzieląca content na akapity
+
     const renderParagraphs = (content) => {
         return content
-            .split('\n\n') // podział na akapity
+            .split('\n\n')
             .map((paragraph, index) => (
                 <p key={index} style={{ marginBottom: '1em', lineHeight: '1.6' }}>
                     {paragraph.trim()}
@@ -76,7 +76,7 @@ export default function PostPage() {
         <Layout>
             <h1>{post.title}</h1>
 
-            {/* Wyświetlamy obrazek */}
+
             {post.image && (
                 <img
                     src={post.image}
@@ -85,7 +85,7 @@ export default function PostPage() {
                 />
             )}
 
-            {/* Renderujemy akapity z treści */}
+
             {renderParagraphs(post.content)}
 
             <h2 style={{ marginTop: '30px' }}>Komentarze użytkowników</h2>
