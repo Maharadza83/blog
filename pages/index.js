@@ -99,7 +99,7 @@ export default function HomePage() {
     return (
         <Layout>
             <h1 className={styles.title}>Witaj na blogu!</h1>
-            <p className={styles.subtitle}>Znajdziesz tu różne wpisy na temat web developmentu.</p>
+            <p className={styles.subtitle}>Znajdziesz tu różne wpisy na temat hodowania oliwek w domu!</p>
 
             <div className={styles.postsContainer}>
                 {posts.map((post) => (

@@ -88,7 +88,7 @@ export default function PostPage() {
             {/* Renderujemy akapity z treści */}
             {renderParagraphs(post.content)}
 
-            <h2 style={{ marginTop: '30px' }}>Komentarze</h2>
+            <h2 style={{ marginTop: '30px' }}>Komentarze użytkowników</h2>
             {comments.length > 0 ? (
                 <ul>
                     {comments.map((c, index) => (
